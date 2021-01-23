@@ -19,7 +19,10 @@ const fetchData = async (id) => {
             img: data.sprites.other.dream_world.front_default,
             nombre: data.name,
             vida: data.stats[0].base_stat,
-            exp: data.base_experience,
+            tipo: data.types[1].types.name,
+            ataque: data.stats[1].base_stat,
+            defensa: data.stats[2].base_stat,
+            especial: data.stats[3].base_stat
 
         }
 
@@ -38,7 +41,10 @@ const pintarCard = (pokemon) => {
 
     clone.querySelector('.card-body-img').setAttribute('src', pokemon.img)
     clone.querySelector('.card-body-title').innerHTML = `${pokemon.nombre}  <span>${pokemon.vida} hp </span>`
-    clone.querySelector('.card-body-text').textContent = `${pokemon.exp} exp`
+    clone.querySelector('.card-body-text').innerHTML = `${pokemon.tipo} `
+    clone.querySelectorAll('.card-footer-social h3')[0].textContent = `${pokemon.ataque}K`
+    clone.querySelectorAll('.card-footer-social h3')[1].textContent = `${pokemon.defensa}K`
+    clone.querySelectorAll('.card-footer-social h3')[2].textContent = `${pokemon.especial}K`
 
     fragment.appendChild(clone)
     flex.appendChild(fragment)
