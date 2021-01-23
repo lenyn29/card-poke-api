@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/ball-master.png">
   
-  <title>Frontend Mentor | Profile card component</title>
+  <title>Pokemón API | Profile card component</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/Normalize.css">
@@ -18,7 +18,9 @@
   </style>
 </head>
 <body>
-  <main class="flex">
+  <main class="flex"></main>
+
+  <template id="template-card">
     <article class="card">
       <img src="./images/bg-pattern-card.svg" alt="imagen header card" class="card-hearder">
       <div class="card-body">
@@ -48,6 +50,8 @@
         </div>
       </div>
     </article>
-  </main>
+  </template>
+
+  <script src="./js/app.js"></script>
 </body>
 </html>
